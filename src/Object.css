@@ -1,6 +1,8 @@
 table, th, td {
     border: 1px solid black;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
+    
+    /* scroll-behavior: inherit; */
     
   }
   th, td {
@@ -8,4 +10,23 @@ table, th, td {
   }
 table {
     background-color: rgb(8, 182, 124);
+    overflow: auto;
+    overflow-y: scroll;
+    height: 200px;
+    overflow: hidden;
+    /* overflow-x: scroll; */
+}
+body {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: blue orange;   /* scroll thumb and track */ 
+}
+.tablescroll{
+  overflow: auto;
+  /* border: 2px solid rgb(96, 6, 241); */
+	/* background-image: linear-gradient(to right, rgb(28, 156, 241), rgb(29, 177, 241));
+  border-radius: 3px;
+  padding: 20px; */
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: blue orange;   /* scroll thumb and track */ 
+
 }

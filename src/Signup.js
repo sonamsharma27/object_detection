@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import 'tachyons'
+import './App.css'
 import { useNavigate } from 'react-router-dom'
 
 function Signup() {
@@ -39,7 +40,7 @@ function Signup() {
 
   return (
     <>
-                <article className=" br1 card ba dark-gray bw1 ph3 pv2 center shadow-5 b--black-10 mv4  w-100 w-50-m w-25-l mw5 center">
+                <article className=" br4 pack card ba dark-gray bw1 ph3 pv2 center shadow-5 b--black-10 mv4  w-100 w-50-m w-25-l mw5 center">
                     <div className="pa4 black-80">
                         <div className="measure center">
                             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
@@ -60,7 +61,7 @@ function Signup() {
 
                                 <div className="mt3">
                                     <label className="db fw6 lh-copy f6" htmlFor="name">Email</label>
-                                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-black w-100"
+                                    <input className=" br3 pa2 input-reset ba bg-transparent hover-bg-black hover-black w-100"
                                         type="email"
                                         name="email"
                                         required
@@ -72,7 +73,7 @@ function Signup() {
 
                                 <div className="mt3">
                                     <label className="db fw6 lh-copy f6" htmlFor="name">Password</label>
-                                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-black w-100"
+                                    <input className=" br3 pa2 input-reset ba bg-transparent hover-bg-black hover-black w-100"
                                         type="password"
                                         name="password"
                                         id="password"
@@ -83,7 +84,7 @@ function Signup() {
                                 </div>
                                 <div className="mt3">
                                         <input
-                                            className=" ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+                                            className="btn btn-info"
                                             type="submit"
                                             value="Signup"
                                             onClick = {onSubmitSignup} 

@@ -30,18 +30,19 @@ function Login() {
                 console.log(response.status)
                 
                     console.log("home history")
-                    if(response.status===200)
+                    if(response.status===200){
                      history("/home")
-                
+                    } else{
+                        alert("Invalid credentials")
+                }
                
             })
             
     }
 
   return (
-    <article className=" pack card-1 mt2 br1 ba dark-gray bw1 ph3 pv2 shadow-5 b--black-10 mv4  w-100 w-50-m w-25-l mw5 center" 
+    <article className=" pack card-1 mt2 br4 ba dark-gray bw1 ph3 pv2 shadow-5 b--black-10 mv4  w-100 w-50-m w-25-l mw5 center" 
 
-      //style={{backgroundImage:"linear-gradient(315deg, #ffffff 0%, #96e4df 74%);", backgroundColor:"4dccc6"}}
       >
                     <div className="pa4 black-80">
                         <div className="measure center">
@@ -50,7 +51,7 @@ function Login() {
 
                                 <div className="mt3">
                                     <label className="db fw6 lh-copy f6" htmlFor="name">Email</label>
-                                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-black w-100"
+                                    <input className=" br3 pa2 input-reset ba bg-transparent hover-bg-black hover-black w-100"
                                         type="text"
                                         name="email"
                                         required
@@ -62,7 +63,7 @@ function Login() {
 
                                 <div className="mt3">
                                     <label className="db fw6 lh-copy f6" htmlFor="name">Password</label>
-                                    <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-black w-100"
+                                    <input className="pa2 br3 input-reset ba bg-transparent hover-bg-black hover-black w-100"
                                         type="password"
                                         name="password"
                                         id="password"
@@ -74,14 +75,14 @@ function Login() {
                                 </div>
                                 <div className="mt3">
                                         <input
-                                            className=" ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+                                            className=" btn btn-info grow"
                                             type="submit"
                                             value="Login"
                                             onClick = {onSubmitLogin} 
                                         />
                                     </div>
-                                    <p>Don't have an account? 
-                                        <button className='black' type="submit"  onClick={(e)=>history("/signup")} >Register here</button>
+                                    <p><b>Don't have an account? </b>
+                                        <button className='btn btn-info ' type="submit"  onClick={(e)=>history("/signup")} >Register here</button>
                                         </p>
     
                                  <label className="pa0 ma0 lh-copy f6 pointer" />
